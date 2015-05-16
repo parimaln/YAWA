@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673ab7"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/frameLayout">
+        <ImageView
+            android:src="@mipmap/reload"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reloadImage" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Bangalore, IN"
+        android:id="@+id/cityTextView"
+        android:layout_below="@+id/frameLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/tempTextView"
+        android:textColor="#FFF"
+        android:textSize="120sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cityTextView"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Condition: "
+        android:id="@+id/conditionTextView"
+        android:layout_below="@+id/tempTextView"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DEG"
+        android:textColor="#FFF"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/tempTextView"
+        android:layout_toRightOf="@+id/tempTextView" />
+
+</RelativeLayout>
